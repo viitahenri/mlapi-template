@@ -7,9 +7,9 @@ TODO
 Game starting sequence
 - [x] Startup
 - [x] Main Menu
-- [] Game
-    - [] Server state for the game scene
+- [ ] Game
+    - [ ] Server state for the game scene
 
 Networking test
-- [] Hosting
-- [] Photon relay
+- [ ] Hosting
+- [ ] Photon relay
