@@ -110,14 +110,14 @@ namespace BossRoom.Client
             k_ActionLayerMask = LayerMask.GetMask(new[] { "PCs", "NPCs", "Ground" });
 
             // find the hero action UI bar
-            GameObject actionUIobj = GameObject.FindGameObjectWithTag("HeroActionBar");
-            actionUIobj.GetComponent<Visual.HeroActionBar>().RegisterInputSender(this);
+            // GameObject actionUIobj = GameObject.FindGameObjectWithTag("HeroActionBar");
+            // actionUIobj.GetComponent<Visual.HeroActionBar>().RegisterInputSender(this);
 
             // find the emote bar to track its buttons
-            GameObject emoteUIobj = GameObject.FindGameObjectWithTag("HeroEmoteBar");
-            emoteUIobj.GetComponent<Visual.HeroEmoteBar>().RegisterInputSender(this);
+            // GameObject emoteUIobj = GameObject.FindGameObjectWithTag("HeroEmoteBar");
+            // emoteUIobj.GetComponent<Visual.HeroEmoteBar>().RegisterInputSender(this);
             // once connected to the emote bar, hide it
-            emoteUIobj.SetActive(false);
+            // emoteUIobj.SetActive(false);
         }
 
         void Awake()
