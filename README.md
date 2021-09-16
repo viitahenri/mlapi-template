@@ -7,6 +7,7 @@ TODO
 Game starting sequence
 - [x] Startup
 - [x] Main Menu
+- [ ] Lobby
 - [ ] Game
     - [ ] Server state for the game scene
 
