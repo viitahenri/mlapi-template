@@ -244,6 +244,7 @@ GameObject:
   - component: {fileID: 210727159}
   - component: {fileID: 210727161}
   - component: {fileID: 210727160}
+  - component: {fileID: 210727162}
   m_Layer: 0
   m_Name: NetworkingManager
   m_TagString: Untagged
@@ -285,13 +286,15 @@ MonoBehaviour:
   LogLevel: 1
   NetworkConfig:
     ProtocolVersion: 0
-    NetworkTransport: {fileID: 0}
+    NetworkTransport: {fileID: 210727162}
     RegisteredScenes:
     - Startup
+    - MainMenu
+    - Game
     AllowRuntimeSceneChanges: 0
     NetworkPrefabs:
     - Prefab: {fileID: 6009713983291384756, guid: 8237adf32a9b6de4892e6febe6b4bdef, type: 3}
-      PlayerPrefab: 0
+      PlayerPrefab: 1
     PlayerPrefabHash:
       id: 0
     CreatePlayerPrefab: 1
@@ -319,7 +322,9 @@ MonoBehaviour:
   references:
     version: 1
     00000000:
-      type: {class: , ns: , asm: }
+      type: {class: NullableBoolSerializable, ns: MLAPI.Configuration, asm: Unity.Multiplayer.MLAPI.Runtime}
+      data:
+        Value: 1897319656204293034
 --- !u!114 &210727161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,8 +337,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c0e18361257a9f409d6064bac74e732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IpHostTransport: {fileID: 0}
-  m_RelayTransport: {fileID: 0}
+  m_IpHostTransport: {fileID: 161504774}
+  m_RelayTransport: {fileID: 1239173968}
+--- !u!114 &210727162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210727158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b84c2d8dfe509a34fb59e2b81f8e1319, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MessageBufferSize: 5120
+  MaxConnections: 100
+  MaxSentMessageQueueSize: 128
+  ConnectAddress: 127.0.0.1
+  ConnectPort: 7777
+  ServerListenPort: 7777
+  ServerWebsocketListenPort: 8887
+  SupportWebsocket: 0
+  Channels: []
+  UseMLAPIRelay: 0
+  MLAPIRelayAddress: 184.72.104.138
+  MLAPIRelayPort: 8888
+  MessageSendMode: 0
 --- !u!1 &308991157
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,7 +852,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e49a0047dd875594a8b6209502628f62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Mixer: {fileID: 24100000, guid: e39f39bfdfb22b541bbc115192fc2809, type: 2}
+  m_Mixer: {fileID: 24100000, guid: 3d86a0a2d83e2452b8d5a99e7b543b25, type: 2}
   m_MixerVarMainVolume: OverallVolume
   m_MixerVarMusicVolume: MusicVolume
 --- !u!1 &2053161303
